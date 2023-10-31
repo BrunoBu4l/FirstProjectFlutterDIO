@@ -91,42 +91,48 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('Meu nome é Bruno Almeida!',
-                style: TextStyle(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+          child: Column(
+            // Column is also a layout widget. It takes a list of children and
+            // arranges them vertically. By default, it sizes itself to fit its
+            // children horizontally, and tries to be as tall as its parent.
+            //
+            // Column has various properties to control how it sizes itself and
+            // how it positions its children. Here we use mainAxisAlignment to
+            // center the children vertically; the main axis here is the vertical
+            // axis because Columns are vertical (the cross axis would be
+            // horizontal).
+            //
+            // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+            // action in the IDE, or press "p" in the console), to see the
+            // wireframe for each widget.
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text('Meu nome é Bruno Almeida!',
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 7, 24, 78),
+                      fontSize: 25,
+                      decoration: TextDecoration.underline)),
+              const Text('Este é o meu primeiro projeto com a DIO!',
+                  style: TextStyle(
                     color: Color.fromARGB(255, 7, 24, 78),
-                    fontSize: 25,
-                    decoration: TextDecoration.underline)),
-            const Text('Este é o meu primeiro projeto com a DIO!',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 7, 24, 78),
-                  fontSize: 23,
-                  fontStyle: FontStyle.italic,
-                )),
-            const Text(
-              'Quantidade de vezes que o botão foi pressionado:',
-              style: TextStyle(color: Colors.redAccent, fontSize: 20),
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+                    fontSize: 23,
+                    fontStyle: FontStyle.italic,
+                  )),
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                'Quantidade de vezes que o botão foi pressionado:',
+                style: TextStyle(color: Colors.redAccent, fontSize: 20),
+              ),
+              Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
